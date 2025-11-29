@@ -8,8 +8,8 @@ main:
     url: /tags/
   - title: "About Me"
     url: "/aboutme/"
-  - title: "Ressources"
-    url: "/ressources/"
+  - title: "Resources"
+    url: "/resources/"
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
