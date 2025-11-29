@@ -1,6 +1,6 @@
 ---
 layout: home
-# title: IBM Integration Sofware Gem
+title: My Portfolio
 # subtitle: CP4I, APIC, ACE, ES, MQ, Aspera 
 classes: wide
 # excerpt: "A place to share experience"
@@ -19,8 +19,5 @@ header:
 - Data Scientist @ GAVB
 - Data Scientist @ Inovamind
 - Data Scientist @ Blu
-
-
-
 
 ---
