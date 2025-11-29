@@ -24,7 +24,7 @@ description              : "Resume and Personal Projects"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/nn_banner.png"
+teaser                   : "/assets/images/nn_banner.jpeg"
 logo                     : "/assets/images/machine-learning.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
