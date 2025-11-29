@@ -1,6 +1,6 @@
 ---
 layout: home
-title: none
+# title: 
 # subtitle: CP4I, APIC, ACE, ES, MQ, Aspera 
 classes: wide
 # excerpt: "A place to share experience"
