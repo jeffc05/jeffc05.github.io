@@ -111,6 +111,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/jeffc00"
+    - label: "GitHub"
+      icon:
+      url: "https://github.com/jeffc00"
 
 # # Site Footer
 # footer:
