@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 
+# title: 
 # subtitle: CP4I, APIC, ACE, ES, MQ, Aspera 
 classes: wide
 # excerpt: "A place to share experience"
@@ -8,6 +8,8 @@ author_profile: true
 header:
   overlay_image: /assets/images/nn_banner.jpeg
 ---
+
+I am a Data Scientist with extensive experience developing ML models with diverse applications in different industries.
 
 ### Education
 - M.S., Applied Mathematics @ Instituto Nacional de Matemática Pura e Aplicada (IMPA) - *March 2013*
