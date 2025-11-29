@@ -15,6 +15,10 @@ header:
 
 ### Work Experience
 - Data Scientist @ Sinatra AI
+- Data Scientist @ Sicredi
+- Data Scientist @ GAVB
+- Data Scientist @ Inovamind
+- Data Scientist @ Blu
 
 
 
