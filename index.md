@@ -1,12 +1,12 @@
 ---
 layout: home
-title: IBM Integration Sofware Gem
-subtitle: CP4I, APIC, ACE, ES, MQ, Aspera 
+# title: IBM Integration Sofware Gem
+# subtitle: CP4I, APIC, ACE, ES, MQ, Aspera 
 classes: wide
-excerpt: "A place to share experience"
+# excerpt: "A place to share experience"
 author_profile: true
 header:
-  overlay_image: /assets/images/CPIntegration.png
+  overlay_image: /assets/images/ai_banner.png
 ---
 
 
