@@ -16,19 +16,22 @@ I am a Data Scientist with extensive experience developing and deploying ML mode
 - B.S., Applied Mathematics @ Universidade Federal do Rio de Janeiro (UFRJ) - *Jan 2010*
 
 ### Work Experience
-- Data Scientist @ Sinatra AI
+- Data Scientist @ Sinatra AI - *Apr 2025 to July 2025*
   * sales time series forecast
   * anomaly detection in ecommerce operations
-- Data Scientist @ Sicredi
+- Data Scientist @ Kumulus - *Oct 2023 to Mar 2024*
+  * cognitve search system
+- Data Scientist @ Sicredi - *Mar 2022 to Oct 2023*
   * NER model for information extraction
   * propensity models for prediction of customer behavior
-- Data Scientist @ GAVB
+- Data Scientist @ GAVB - *Apr 2021 to Mar 2022*
   * digital transformation of the customer service experience
-- Data Scientist @ Inovamind
+- Data Scientist @ Inovamind - *Aug 2020 to Apr 2021*
   * face recognition/verification
   * face spoofing detection
   * extraction of data from official documents
-- Data Scientist @ Blu
+- Data Scientist @ Blu - *Dec 2019 to Aug 2020*
   * customer engagement scoring system
   * efficient algorithm for anticipation of retailers' receivables, granting them access to a cheaper line of credit
+
 ---
