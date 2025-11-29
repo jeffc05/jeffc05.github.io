@@ -102,18 +102,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Pierre Richelle"
-  avatar           : /assets/images/bio-photo.jpg
+  name             : "Jefferson Lee CHan"
+  avatar           : /assets/images/circle_photo.png
   bio              : "I am Client Technical Specialist in Integration at IBM"
-  location         : "Belgium"
-  email            : "pierre.richelle@be.ibm.com"
+  location         : "Rio de Janeiro, RJ - Brazil"
+  email            : "chanj86@gmail.com"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/PierreRichelle"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/pierre-richelle-8ba4976"
+      url: "https://linkedin.com/in/jeffc00"
 
 # Site Footer
 footer:
