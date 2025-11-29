@@ -9,18 +9,10 @@ header:
   overlay_image: /assets/images/nn_banner.jpeg
 ---
 
+### Education
+- M.S., Applied Mathematics @ Instituto Nacional de Matemática Pura e Aplicada (IMPA) - March 2013
+- B.S., Applied Mathematics @ Universidade Federal do Rio de Janeiro (UFRJ) - Jan 2010
 
-I have created this place to provide information on IBM Integration Software.  
-If you are looking to get some information on a specific software or if you would like to have a topic addressed here, do not hesitate to contact me.
-
-Software covered:
-- [CP4I](https://www.ibm.com/be-en/cloud/cloud-pak-for-integration) - IBM Cloud Pak for Integration
-- [ACE](https://www.ibm.com/be-en/cloud/app-connect) - AppConnect Enterprise - IBM application integration solution
-- [APIC](https://www.ibm.com/be-en/cloud/api-connect) - API Connect - IBM API Management solution
-- [MQ](https://www.ibm.com/products/mq) - IBM messaging solution
-- [Event Streams](https://www.ibm.com/be-en/cloud/event-streams) - IBM Eventing solution based on Apache Kafka
-- Aspera - IBM file transfer solution
-
-You can find resource information under the resources link.
-
+### Work Experience
+- Data Scientist @ Sinatra AI
 ---
