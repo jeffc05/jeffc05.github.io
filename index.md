@@ -1,6 +1,6 @@
 ---
 layout: home
-title: My Portfolio
+title: none
 # subtitle: CP4I, APIC, ACE, ES, MQ, Aspera 
 classes: wide
 # excerpt: "A place to share experience"
@@ -10,8 +10,8 @@ header:
 ---
 
 ### Education
-- M.S., Applied Mathematics @ Instituto Nacional de Matemática Pura e Aplicada (IMPA) - **March 2013**
-- B.S., Applied Mathematics @ Universidade Federal do Rio de Janeiro (UFRJ) - **Jan 2010**
+- M.S., Applied Mathematics @ Instituto Nacional de Matemática Pura e Aplicada (IMPA) - *March 2013*
+- B.S., Applied Mathematics @ Universidade Federal do Rio de Janeiro (UFRJ) - *Jan 2010*
 
 ### Work Experience
 - Data Scientist @ Sinatra AI
