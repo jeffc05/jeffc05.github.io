@@ -6,7 +6,7 @@ classes: wide
 # excerpt: "A place to share experience"
 author_profile: true
 header:
-  overlay_image: /assets/images/ai_banner.png
+  overlay_image: /assets/images/nn_banner.png
 ---
 
 
