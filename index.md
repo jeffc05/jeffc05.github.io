@@ -9,7 +9,7 @@ header:
   overlay_image: /assets/images/nn_banner.jpeg
 ---
 
-I am a Data Scientist with extensive experience developing and deploying ML models with diverse applications in different industries.
+I am a Data Scientist with extensive experience developing and deploying ML models with diverse applications across different industries.
 
 ### Education
 - M.S., Applied Mathematics @ Instituto Nacional de Matemática Pura e Aplicada (IMPA) - *March 2013*
