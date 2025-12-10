@@ -212,6 +212,13 @@ whitelist:
   - jekyll-include-cache
 
 
+# Collections
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path/
+
+
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
@@ -257,6 +264,26 @@ defaults:
       type: projects
     values:
       layout: single
+      show_date: true
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+      toc: true
+  # _articles
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: single
+      show_date: true
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+      toc: true
       show_date: true
       author_profile: true
       read_time: true
