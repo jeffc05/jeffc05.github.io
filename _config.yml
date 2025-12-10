@@ -223,12 +223,12 @@ collections:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
-article_archive:
+category_archive:
   type: liquid
-  path: /articles/
-resource_archive:
+  path: /categories/
+tag_archive:
   type: liquid
-  path: /resources/
+  path: /tags/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
