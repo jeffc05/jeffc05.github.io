@@ -49,12 +49,9 @@ html {
   }
 
   /* Smaller excerpt text on archive/listing pages */
-  .archive__item-excerpt {
-    font-size: 0.75em !important;
-  }
-
-  p.archive__item-excerpt {
-    font-size: 0.75em !important;
+  .list__item .archive__item-excerpt,
+  .grid__item .archive__item-excerpt {
+    font-size: 12px !important;
   }
 
   .code-header {
