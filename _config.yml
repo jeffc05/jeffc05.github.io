@@ -209,6 +209,9 @@ collections:
   articles:
     output: true
     permalink: /articles/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 # Archives
 #  Type
