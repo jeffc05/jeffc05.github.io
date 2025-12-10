@@ -2,12 +2,20 @@
 main:
   - title: "Projects"
     url: /posts/
-  - title: "Articles"
+  - title: "Categories"
     url: /categories/
-  - title: "Resources"
+  - title: "Tags"
     url: /tags/
   - title: "About Me"
-    url: /aboutme/
+    url: "/aboutme/"
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
 docs:
   - title: Home
     url: /
