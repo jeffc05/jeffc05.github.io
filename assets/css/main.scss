@@ -50,7 +50,11 @@ html {
 
   /* Smaller excerpt text on archive/listing pages */
   .archive__item-excerpt {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
+  }
+
+  p.archive__item-excerpt {
+    font-size: 0.75em !important;
   }
 
   .code-header {
