@@ -224,21 +224,21 @@ whitelist:
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: /articles/
+  path: /categories/
 tag_archive:
   type: liquid
-  path: /resources/
+  path: /tags/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
-    - articles
-    - resources
+    - categories
+    - tags
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
   permalinks:
-    category: /articles/:name/
-    tag: /resources/:name/
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
