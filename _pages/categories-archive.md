@@ -1,6 +1,6 @@
 ---
-title: "Projects by Category"
-layout: categories
+title: "Projects"
 permalink: /categories/
+layout: categories
 author_profile: true
 ---
