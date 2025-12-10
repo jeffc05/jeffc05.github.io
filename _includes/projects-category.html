@@ -1,5 +1,0 @@
-{%- for category in site.categories[include.taxonomy] -%}
-  {%- unless category.hidden -%}
-    {% include archive-single.html %}
-  {%- endunless -%}
-{%- endfor -%}
