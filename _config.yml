@@ -214,6 +214,9 @@ whitelist:
 
 # Collections
 collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
   articles:
     output: true
     permalink: /articles/:path/
@@ -277,13 +280,6 @@ defaults:
       type: articles
     values:
       layout: single
-      show_date: true
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
-      toc: true
       show_date: true
       author_profile: true
       read_time: true
