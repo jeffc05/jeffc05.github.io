@@ -3,7 +3,7 @@ title: "Rental Price Prediction"
 categories: regression
 mathjax: true
 toc: true
-subtitle: Prediction of rental prices in Rio de Janeiro, RJ
+excerpt: Prediction of rental prices in Rio de Janeiro, RJ
 teaser: false
 ---
 
@@ -11,7 +11,7 @@ teaser: false
 
 ## Overview
 
-End-to-end rental price prediction for Rio de Janeiro using scraped listings from Zap Imóveis. The project covers data collection, cleaning, exploratory analysis, and a gradient-boosted tree model to estimate monthly rent from property attributes and location.
+End-to-end rental price pediction for Rio de Janeiro using scraped listings from Zap Imóveis. The project covers data collection, cleaning, exploratory analysis, and a gradient-boosted tree model to estimate monthly rent from property attributes and location.
 
 ## Data
 
