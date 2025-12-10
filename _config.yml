@@ -229,17 +229,6 @@ article_archive:
 resource_archive:
   type: liquid
   path: /resources/
-# https://github.com/jekyll/jekyll-archives
-jekyll-archives:
-  enabled:
-    - articles
-    - resources
-  layouts:
-    article: archive-taxonomy
-    resource: archive-taxonomy
-  permalinks:
-    article: /articles/:name/
-    resource: /resources/:name/
 
 # HTML Compression
 # - https://jch.penibelst.de/
