@@ -9,68 +9,43 @@ teaser: false
 
 ![Zap Imóveis rental price dataset sample](/assets/images/projects/rental_prices/zap-imoveis-image.webp)
 
-## Project Overview
-
-This project presents a comprehensive analysis of the rental property market in Rio de Janeiro, Brazil, combining web scraping, data cleaning, exploratory analysis, geospatial visualization, and machine learning to predict rental prices.
-
 ## Problem Statement
 
-Understanding rental prices in Rio de Janeiro is challenging due to the city's diverse neighborhoods, varying property types, and numerous factors affecting pricing. This project aims to build predictive models that can accurately estimate rental prices based on property characteristics, location, and amenities.
+Rio de Janeiro’s rental market varies widely across neighborhoods, property types, and amenities. Renters and investors need a data-driven way to estimate fair rental prices and compare listings. This project builds predictive models to estimate rental prices (`rental_price`) from property characteristics, location, and amenities.
 
-## Data Source
+## Business Value
 
-The dataset was collected through web scraping of a major Brazilian real estate platform, containing detailed information about rental properties across Rio de Janeiro, including:
-- Property characteristics (size, rooms, amenities)
-- Location data (district, neighborhood, coordinates)
-- Financial information (rental price, condominium fees, property tax)
-- Property descriptions and metadata
+- **Pricing guidance**: Provides an estimated fair rent for new or existing listings, reducing under/over-pricing risk.
+- **Market transparency**: Highlights drivers of rent (size, location, amenities) to inform negotiations and investment decisions.
+- **Operational efficiency**: Automates feature extraction and prediction, enabling faster portfolio screening.
+- **Geospatial insight**: Maps price patterns across districts to target high-demand, high-yield areas.
 
 ## Methodology
 
-The project follows a systematic data science workflow:
+1. **Data collection**: Web scraping of a major Brazilian real estate portal; raw JSON stored with listing details.
+2. **Cleaning & normalization**: Handle `N/A`, lowercasing, standardize categories, parse coordinates, and numeric extraction for prices/fees.
+3. **Feature engineering**: Expand nested amenities to booleans; extract counts (rooms, baths, parking, suites); derive ratios (meterage per room/bath/suite); convert coordinates to polar; handle missing values via regex extraction and targeted fills.
+4. **Exploratory analysis**: Distributions, outlier filtering (rental_price < 120k, condo_fee < 10.5k, property_tax < 75k), correlation heatmaps.
+5. **Geospatial analysis**: Project coordinates (UTM 23S) for accurate geometry; map rental prices over Rio districts using GeoPandas/Matplotlib.
+6. **Modeling**: Encode features with DictVectorizer; train Linear Regression, Random Forest, and XGBoost; evaluate via RMSE on training data.
 
-1. **Data Collection**: Automated web scraping using SeleniumBase to extract property listings
-2. **Data Cleaning**: 
-   - Parsing nested JSON structures
-   - Text normalization and standardization
-   - Regex-based feature extraction
-   - Handling missing values through intelligent imputation
-3. **Feature Engineering**:
-   - Converting amenities into binary features
-   - Creating derived features (area ratios)
-   - Transforming geographic coordinates to polar coordinates
-4. **Exploratory Data Analysis**:
-   - Statistical summaries and distributions
-   - Outlier detection and removal
-   - Correlation analysis
-5. **Geospatial Visualization**:
-   - Mapping property locations across Rio de Janeiro districts
-   - Visualizing rental price patterns geographically
-6. **Machine Learning**:
-   - Training multiple regression models (Linear Regression, Random Forest, XGBoost)
-   - Model comparison using RMSE metrics
-   - Performance evaluation on training data
+## Findings
 
-## Key Features
+- **Price drivers**: Meterage, number of bathrooms/suites, and condo_fee show strong positive correlation with rent; parking spaces add value but with diminishing returns.
+- **Geography matters**: Coastal and west zones (e.g., Barra da Tijuca) show higher rents; inland districts trend lower.
+- **Amenities**: Presence of key amenities (e.g., pool, gym, security) aligns with higher rents; amenity columns converted to boolean indicators reduced noise.
+- **Data quality**: Many listings lacked explicit counts; regex-based extraction from descriptions recovered missing rooms/parking/floor_level values.
 
-- **Comprehensive data preprocessing** pipeline handling real-world messy data
-- **Geospatial analysis** with coordinate transformation and district mapping
-- **Feature engineering** to capture meaningful property characteristics
-- **Multiple ML models** to compare different approaches
-- **Interactive visualizations** using Plotly and static plots with Matplotlib/Seaborn
+## Results
 
-## Technologies Used
+- **Clean dataset**: Deduplicated, standardized, and enriched with engineered features and geospatial transforms.
+- **Models trained**: Linear Regression (baseline), Random Forest, and XGBoost; tree-based models fit training data best (lowest RMSE on train), indicating non-linear relationships.
+- **Visualization outputs**: Histogram/boxplots for fees and rent, correlation heatmaps, and geospatial scatter over district polygons.
+- **Actionable use**: The pipeline can score new listings to suggest fair rent and identify outlier pricing; geospatial views guide area targeting.
 
-- **Data Processing**: pandas, NumPy
-- **Visualization**: Matplotlib, Seaborn, Plotly
-- **Geospatial**: GeoPandas, Shapely
-- **Machine Learning**: scikit-learn, XGBoost
-- **Web Scraping**: SeleniumBase (in separate scraper module)
+## Next Steps
 
-## Expected Outcomes
-
-The project delivers:
-- Clean, analysis-ready dataset of Rio de Janeiro rental properties
-- Insights into rental price distributions and geographic patterns
-- Predictive models capable of estimating rental prices
-- Comparative analysis of different machine learning approaches
+- Add cross-validation and hold-out test metrics for robust generalization estimates.
+- Hyperparameter tune RF/XGBoost; calibrate predictions.
+- Incorporate time-based features (listing date) if available; add neighborhood socioeconomic indicators to improve location signal.
+- Package the pipeline into a reusable script or service for batch scoring of new listings.
