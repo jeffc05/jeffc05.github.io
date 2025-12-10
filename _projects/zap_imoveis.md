@@ -1,15 +1,13 @@
 ---
 title: "Rental Price Prediction"
-categories:
-    - regression
-    - webscraping
+categories: regression
 mathjax: true
 toc: true
-
-header:
-    teaser: /assets/images/projects/rental_prices/zap-imoveis-image.webp
+subtitle: Prediction of rental prices in Rio de Janeiro, RJ
 
 ---
+
+![Zap Imóveis rental price dataset sample]({{ '/assets/images/projects/rental_prices/zap-imoveis-image.webp' | relative_url }})
 
 ## Overview
 
