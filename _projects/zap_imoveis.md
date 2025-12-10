@@ -4,7 +4,7 @@ categories: regression
 mathjax: true
 toc: true
 subtitle: Prediction of rental prices in Rio de Janeiro, RJ
-
+teaser: false
 ---
 
 ![Zap Imóveis rental price dataset sample]({{ '/assets/images/projects/rental_prices/zap-imoveis-image.webp' | relative_url }})
