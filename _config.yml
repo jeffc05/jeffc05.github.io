@@ -232,14 +232,14 @@ resource_archive:
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
-    - categories
-    - tags
+    - articles
+    - resources
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
   permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
+    category: /articles/:name/
+    tag: /resources/:name/
 
 # HTML Compression
 # - https://jch.penibelst.de/
