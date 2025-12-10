@@ -33,6 +33,21 @@ html {
     z-index: 100;
   }
 
+  /* Ensure consistent layout width */
+  #main {
+    display: flex;
+    width: 100%;
+  }
+
+  .sidebar {
+    flex-shrink: 0;
+  }
+
+  .archive {
+    flex: 1;
+    min-height: 100vh;
+  }
+
   .code-header {
     display: flex;
     justify-content: flex-end;
