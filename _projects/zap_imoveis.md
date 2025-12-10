@@ -11,13 +11,13 @@ teaser: false
 
 ## Overview
 
-End-to-end rental price pediction for Rio de Janeiro using scraped listings from Zap Imóveis. The project covers data collection, cleaning, exploratory analysis, and a gradient-boosted tree model to estimate monthly rent from property attributes and location.
+End-to-end rental price pediction for Rio de Janeiro using scraped listings from Zap Imóveis. The project covers data collection, cleaning, exploratory analysis, and a random forest model to estimate monthly rent from property attributes and location.
 
 ## Data
 
 - Source: Public rental listings on Zap Imóveis (web scraping of search result pages).
 - Fields captured: asking rent, condo fee, usable area, bedrooms, bathrooms, parking spots, property type, neighborhood text, and geo hints embedded in listing metadata.
-- Storage: cleaned CSV/Parquet files with reproducible scraping scripts and timestamped snapshots so model training can be rerun.
+- Storage: cleaned CSV files with reproducible scraping scripts and timestamped snapshots so model training can be rerun.
 - Quality steps: normalize currency/area units, drop duplicates, trim clear outliers (e.g., zero area or extreme prices), and standardize neighborhood names.
 
 ## Pipeline
