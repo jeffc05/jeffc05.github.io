@@ -7,7 +7,7 @@ toc: true
 teaser: false
 ---
 
-![Zap Imóveis rental price dataset sample]({{ '/assets/images/projects/rental_prices/zap-imoveis-image.webp' | relative_url }})
+![Zap Imóveis rental price dataset sample](/assets/images/projects/rental_prices/zap-imoveis-image.webp)
 
 ## Project Overview
 
