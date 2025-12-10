@@ -188,8 +188,15 @@ sass:
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
+# Collections
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path/
+
+
 # Outputting
-permalink: /:articles/:title/
+permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -255,6 +262,19 @@ defaults:
   - scope:
       path: ""
       type: projects
+    values:
+      layout: single
+      show_date: true
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+      toc: true
+  # _articles
+  - scope:
+      path: ""
+      type: articles
     values:
       layout: single
       show_date: true
