@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-permalink: /resources/
+permalink: /tags/
 layout: tags
 author_profile: true
 ---
