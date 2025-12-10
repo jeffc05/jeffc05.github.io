@@ -22,7 +22,6 @@ layout: archive
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ entries_layout }}">
       {% for article in year.items %}
-        {% assign post = article %}
         {% include archive-single.html type=entries_layout %}
       {% endfor %}
     </div>
