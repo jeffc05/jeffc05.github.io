@@ -220,6 +220,9 @@ collections:
   articles:
     output: true
     permalink: /articles/:path/
+  resources:
+    output: true
+    permalink: /resources/:path/
 
 
 # Archives
@@ -255,6 +258,19 @@ defaults:
   - scope:
       path: ""
       type: articles
+    values:
+      layout: single
+      show_date: true
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+      toc: true
+  # _resources
+  - scope:
+      path: ""
+      type: resources
     values:
       layout: single
       show_date: true
