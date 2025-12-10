@@ -1,21 +1,18 @@
 ---
-title: "SpanBERTa: Pre-train RoBERTa Language Model for Spanish from Scratch"
-date: 2020-04-07
+title: "Rental Price Prediction"
 categories:
   - posts
-tags:
-  - nlp
-  - bert
+category: regression
 mathjax: true
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "bookmark"
-excerpt: "Self-training methods with transformer models have achieved state-of-the-art performance on most NLP tasks. However, because training them is computationally expensive, most currently available pretrained transformer models are only for English."
+excerpt: "Prediction of rental prices in Rio de Janeiro, RJ"
 header:
-  teaser: https://github.com/chriskhanhtran/spanish-bert/blob/master/img/part1.PNG?raw=true
+    teaser: /assets/images/projects/rental_prices/zap-imoveis-image.webp
 
 ---
-![](https://github.com/chriskhanhtran/spanish-bert/blob/master/img/part1.PNG?raw=true)
+<!-- ![](https://github.com/chriskhanhtran/spanish-bert/blob/master/img/part1.PNG?raw=true)
 
 [![Run in Google Colab](https://img.shields.io/badge/Colab-Run_in_Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1mXWYYkB9UjRdklPVSDvAcUDralmv3Pgv)
 
@@ -440,4 +437,4 @@ We have walked through how to train a BERT language model for Spanish from scrat
 
 Next, we will implement the pretrained models on downstream tasks including Sequence Classification, NER, POS tagging, and NLI, as well as compare the model's performance with some non-BERT models.
 
-Stay tuned for our next posts!
+Stay tuned for our next posts! -->
