@@ -4,6 +4,7 @@ date: 2025-12-10
 categories: [technology, tutorial]
 tags: [sample, demo]
 excerpt: "A sample article to demonstrate the articles collection."
+hidden: false
 ---
 
 This is a sample article demonstrating the articles collection functionality.
