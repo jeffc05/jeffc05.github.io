@@ -1,26 +1,23 @@
 ---
-title: "Rental Price Prediction"
+title: "Rio de Janeiro Rental Property Analysis & Price Prediction"
 categories:
   - regression
 mathjax: true
 toc: true
-excerpt: Prediction of rental prices in Rio de Janeiro, RJ
 teaser: false
 ---
 
 ![Zap Imóveis rental price dataset sample]({{ '/assets/images/projects/rental_prices/zap-imoveis-image.webp' | relative_url }})
 
-# Rio de Janeiro Rental Property Analysis & Price Prediction
-
 ## Project Overview
 
 This project presents a comprehensive analysis of the rental property market in Rio de Janeiro, Brazil, combining web scraping, data cleaning, exploratory analysis, geospatial visualization, and machine learning to predict rental prices.
 
-### Problem Statement
+## Problem Statement
 
 Understanding rental prices in Rio de Janeiro is challenging due to the city's diverse neighborhoods, varying property types, and numerous factors affecting pricing. This project aims to build predictive models that can accurately estimate rental prices based on property characteristics, location, and amenities.
 
-### Data Source
+## Data Source
 
 The dataset was collected through web scraping of a major Brazilian real estate platform, containing detailed information about rental properties across Rio de Janeiro, including:
 - Property characteristics (size, rooms, amenities)
@@ -28,7 +25,7 @@ The dataset was collected through web scraping of a major Brazilian real estate 
 - Financial information (rental price, condominium fees, property tax)
 - Property descriptions and metadata
 
-### Methodology
+## Methodology
 
 The project follows a systematic data science workflow:
 
@@ -54,7 +51,7 @@ The project follows a systematic data science workflow:
    - Model comparison using RMSE metrics
    - Performance evaluation on training data
 
-### Key Features
+## Key Features
 
 - **Comprehensive data preprocessing** pipeline handling real-world messy data
 - **Geospatial analysis** with coordinate transformation and district mapping
@@ -62,7 +59,7 @@ The project follows a systematic data science workflow:
 - **Multiple ML models** to compare different approaches
 - **Interactive visualizations** using Plotly and static plots with Matplotlib/Seaborn
 
-### Technologies Used
+## Technologies Used
 
 - **Data Processing**: pandas, NumPy
 - **Visualization**: Matplotlib, Seaborn, Plotly
@@ -70,7 +67,7 @@ The project follows a systematic data science workflow:
 - **Machine Learning**: scikit-learn, XGBoost
 - **Web Scraping**: SeleniumBase (in separate scraper module)
 
-### Expected Outcomes
+## Expected Outcomes
 
 The project delivers:
 - Clean, analysis-ready dataset of Rio de Janeiro rental properties
