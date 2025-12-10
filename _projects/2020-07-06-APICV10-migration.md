@@ -1,11 +1,8 @@
 ---
 layout: single
 author_profile: true
-title: APIC Migration
-subtitle: from V5 to V10
-tags: [apic, migration]
+title: Rental Price Prediction
 comments: true
-category: apic
+category: [regression, webscraping]
 ---
 
-LOREM IPSUM
