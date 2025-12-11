@@ -26,7 +26,27 @@ Rio de Janeiro’s rental market varies widely across neighborhoods, property ty
 2. **Cleaning & normalization**: Handle `N/A`, lowercasing, standardize categories, parse coordinates, and numeric extraction for prices/fees.
 3. **Feature engineering**: Expand nested amenities to booleans; extract counts (rooms, baths, parking, suites); derive ratios (meterage per room/bath/suite); convert coordinates to polar; handle missing values via regex extraction and targeted fills.
 4. **Exploratory analysis**: Distributions, outlier filtering (rental_price < 120k, condo_fee < 10.5k, property_tax < 75k), correlation heatmaps.
+
+### Rental Price Distribution by Category
+
+<iframe src="/assets/images/projects/rental_prices/box_rental_by_category.html" width="100%" height="500px" style="border: none;"></iframe>
+
+### Rental Price Distribution by District
+
+<iframe src="/assets/images/projects/rental_prices/box_rental_by_district.html" width="100%" height="500px" style="border: none;"></iframe>
+
+### Rental Price Distribution by Category and District
+
+<iframe src="/assets/images/projects/rental_prices/box_rental_by_category_and_district.html" width="100%" height="500px" style="border: none;"></iframe>
+
+### Geospatial Price Analysis: Rio de Janeiro
+
+![Rio de Janeiro rental price geospatial analysis](/assets/images/projects/rental_prices/rio_de_janeiro.png)
+
 5. **Geospatial analysis**: Project coordinates (UTM 23S) for accurate geometry; map rental prices over Rio districts using GeoPandas/Matplotlib.
+
+
+
 6. **Modeling**: Encode features with DictVectorizer; train Linear Regression, Random Forest, and XGBoost; evaluate via RMSE on training data.
 
 ## Findings
@@ -42,6 +62,14 @@ Rio de Janeiro’s rental market varies widely across neighborhoods, property ty
 - **Models trained**: Linear Regression (baseline), Random Forest, and XGBoost; tree-based models fit training data best (lowest RMSE on train), indicating non-linear relationships.
 - **Visualization outputs**: Histogram/boxplots for fees and rent, correlation heatmaps, and geospatial scatter over district polygons.
 - **Actionable use**: The pipeline can score new listings to suggest fair rent and identify outlier pricing; geospatial views guide area targeting.
+
+### Feature Importances (XGBoost)
+
+<iframe src="/assets/images/projects/rental_prices/feature_importances_xgb.html" width="100%" height="500px" style="border: none;"></iframe>
+
+### Model Performance: Actual vs Predicted Rental Prices
+
+<iframe src="/assets/images/projects/rental_prices/scatter_actual_vs_pred_log.html" width="100%" height="500px" style="border: none;"></iframe>
 
 ## Next Steps
 
