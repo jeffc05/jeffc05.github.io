@@ -10,15 +10,13 @@ teaser: false
 ![Zap Imóveis rental price dataset sample](/assets/images/projects/rental_prices/zap-imoveis-image.webp)
 
 ## Problem Statement
-
-Rio de Janeiro’s rental market varies widely across neighborhoods, property types, and amenities. Renters and investors need a data-driven way to estimate fair rental prices and compare listings. This project builds predictive models to estimate rental prices (`rental_price`) from property characteristics, location, and amenities.
+Rio de Janeiro’s rental market is fragmented across districts, property types, and amenity mixes, making fair pricing unclear. We need a data-driven model to estimate monthly rent from listing attributes and location signals so owners, renters, and investors can benchmark prices and detect mispricing.
 
 ## Business Value
-
-- **Pricing guidance**: Provides an estimated fair rent for new or existing listings, reducing under/over-pricing risk.
-- **Market transparency**: Highlights drivers of rent (size, location, amenities) to inform negotiations and investment decisions.
-- **Operational efficiency**: Automates feature extraction and prediction, enabling faster portfolio screening.
-- **Geospatial insight**: Maps price patterns across districts to target high-demand, high-yield areas.
+- Fair-pricing guidance to reduce lost revenue or vacancy from mispriced listings.
+- Faster screening of large listing inventories for investors/operators.
+- Transparency into top rent drivers to inform renovation and amenity investments.
+- Geospatial insight to prioritize high-yield districts and flag overpriced outliers.
 
 ## Methodology
 
@@ -45,23 +43,18 @@ Rio de Janeiro’s rental market varies widely across neighborhoods, property ty
 
 5. **Geospatial analysis**: Project coordinates (UTM 23S) for accurate geometry; map rental prices over Rio districts using GeoPandas/Matplotlib.
 
-
-
 6. **Modeling**: Encode features with DictVectorizer; train Linear Regression, Random Forest, and XGBoost; evaluate via RMSE on training data.
 
 ## Findings
-
-- **Price drivers**: Meterage, number of bathrooms/suites, and condo_fee show strong positive correlation with rent; parking spaces add value but with diminishing returns.
-- **Geography matters**: Coastal and west zones (e.g., Barra da Tijuca) show higher rents; inland districts trend lower.
-- **Amenities**: Presence of key amenities (e.g., pool, gym, security) aligns with higher rents; amenity columns converted to boolean indicators reduced noise.
-- **Data quality**: Many listings lacked explicit counts; regex-based extraction from descriptions recovered missing rooms/parking/floor_level values.
+- Strongest rent correlates: meterage, bathrooms/suites, and condo_fee; parking contributes with diminishing returns.
+- Geography: coastal/west districts (e.g., Barra da Tijuca) command materially higher rents than inland districts.
+- Amenities: pool/gym/security align with higher prices; boolean expansion reduced noise from semi-structured text.
+- Data quality: regex recovery rescued many missing structural fields, improving coverage and model stability.
 
 ## Results
-
-- **Clean dataset**: Deduplicated, standardized, and enriched with engineered features and geospatial transforms.
-- **Models trained**: Linear Regression (baseline), Random Forest, and XGBoost; tree-based models fit training data best (lowest RMSE on train), indicating non-linear relationships.
-- **Visualization outputs**: Histogram/boxplots for fees and rent, correlation heatmaps, and geospatial scatter over district polygons.
-- **Actionable use**: The pipeline can score new listings to suggest fair rent and identify outlier pricing; geospatial views guide area targeting.
+- Clean, enriched dataset with engineered numeric, categorical, and geospatial features.
+- Models trained; Random Forest achieved the lowest validation RMSE among tested models, outperforming the linear baseline and shallow regularized XGBoost.
+- Delivered visuals: fee/rent histograms, boxplots by district/category, lower-triangle correlation heatmap, geospatial scatter, feature importances, and predicted vs actual scatter.
 
 ### Feature Importances (XGBoost)
 
