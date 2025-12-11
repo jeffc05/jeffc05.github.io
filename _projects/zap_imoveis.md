@@ -19,11 +19,11 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 - Geospatial insight to prioritize high-yield districts and flag overpriced outliers.
 
 ## Methodology
-1) **Data acquisition**: Scrape portal listings; ingest newline-delimited JSON and wrap into a valid array.
-2) **Cleaning/normalization**: Lowercase/strip text; standardize categories; parse coordinates; extract numerics for rental_price/condo_fee/property_tax.
-3) **Feature engineering**: Expand nested amenities to booleans; regex-recover missing counts (rooms, baths, parking, suites, floor); create density ratios (meterage per room/bath/suite); convert lon/lat to polar (r, theta); targeted fills/sentinels; deduplicate and remove extreme outliers.
-4) **EDA & geospatial**: Plot fee/rent distributions with box marginals; boxplots by district/category; masked correlation heatmap; GeoPandas scatter over district polygons.
-5) **Modeling**: Train/val/test split; DictVectorizer for categorical/boolean features; models: Linear Regression (baseline), Random Forest, XGBoost; metric: RMSE on log_rental_price.
+1. **Data acquisition**: Scrape portal listings; ingest newline-delimited JSON and wrap into a valid array.
+2. **Cleaning/normalization**: Lowercase/strip text; standardize categories; parse coordinates; extract numerics for rental_price/condo_fee/property_tax.
+3. **Feature engineering**: Expand nested amenities to booleans; regex-recover missing counts (rooms, baths, parking, suites, floor); create density ratios (meterage per room/bath/suite); convert lon/lat to polar (r, theta); targeted fills/sentinels; deduplicate and remove extreme outliers.
+4. **EDA & geospatial**: Plot fee/rent distributions with box marginals; boxplots by district/category; masked correlation heatmap; GeoPandas scatter over district polygons.
+5. **Modeling**: Train/val/test split; DictVectorizer for categorical/boolean features; models: Linear Regression (baseline), Random Forest, XGBoost; metric: RMSE on log_rental_price.
 
 ## Findings
 - Strongest rent correlates: meterage, bathrooms/suites, and condo_fee; parking contributes with diminishing returns.
