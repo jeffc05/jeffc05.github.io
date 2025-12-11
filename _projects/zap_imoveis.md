@@ -27,15 +27,15 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 
 ### Rental Price Distribution by Category
 
-<iframe src="/assets/images/projects/rental_prices/box_rental_by_category.html" width="100%" height="500px" style="border: none;"></iframe>
+![Rental price distribution by category](/assets/images/projects/rental_prices/rental_price_by_category.png)
 
 ### Rental Price Distribution by District
 
-<iframe src="/assets/images/projects/rental_prices/box_rental_by_district.html" width="100%" height="500px" style="border: none;"></iframe>
+![Rental price distribution by district](/assets/images/projects/rental_prices/rental_price_by_district.png)
 
 ### Rental Price Distribution by Category and District
 
-<iframe src="/assets/images/projects/rental_prices/box_rental_by_category_and_district.html" width="100%" height="500px" style="border: none;"></iframe>
+![Rental price distribution by category and district](/assets/images/projects/rental_prices/rental_price_by_category_and_district.png)
 
 ### Geospatial Price Analysis: Rio de Janeiro
 
@@ -58,11 +58,11 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 
 ### Feature Importances (XGBoost)
 
-<iframe src="/assets/images/projects/rental_prices/feature_importances_xgb.html" width="100%" height="500px" style="border: none;"></iframe>
+![Feature importances from XGBoost model](/assets/images/projects/rental_prices/feature_importances_xgb.png)
 
 ### Model Performance: Actual vs Predicted Rental Prices
 
-<iframe src="/assets/images/projects/rental_prices/scatter_actual_vs_pred_log.html" width="100%" height="500px" style="border: none;"></iframe>
+![Actual vs predicted log rental prices](/assets/images/projects/rental_prices/actual_vs_predicted_log_rent.png)
 
 ## Next Steps
 
