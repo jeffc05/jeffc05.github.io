@@ -20,36 +20,23 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 
 ## Methodology
 
-1. **Data collection**: Web scraping of a major Brazilian real estate portal; raw JSON stored with listing details.
-2. **Cleaning & normalization**: Handle `N/A`, lowercasing, standardize categories, parse coordinates, and numeric extraction for prices/fees.
+1. **Data collection**: Web scraping of Zap Imóveis, a major Brazilian real estate portal; raw JSON stored with listing details.
+2. **Cleaning & normalization**: Handle missing values, lowercasing, standardize categories, parse coordinates, and numeric extraction for prices/fees.
 3. **Feature engineering**: Expand nested amenities to booleans; extract counts (rooms, baths, parking, suites); derive ratios (meterage per room/bath/suite); convert coordinates to polar; handle missing values via regex extraction and targeted fills.
 4. **Exploratory analysis**: Distributions, outlier filtering (rental_price < 120k, condo_fee < 10.5k, property_tax < 75k), correlation heatmaps.
-
-### Rental Price Distribution by Category
-
-![Rental price distribution by category](/assets/images/projects/rental_prices/box_rental_by_category.png)
-
-### Rental Price Distribution by District
-
-![Rental price distribution by district](/assets/images/projects/rental_prices/box_rental_by_district.png)
-
-### Rental Price Distribution by Category and District
-
-![Rental price distribution by category and district](/assets/images/projects/rental_prices/box_rental_by_category_and_district.png)
-
-### Geospatial Price Analysis: Rio de Janeiro
-
-![Rio de Janeiro rental price geospatial analysis](/assets/images/projects/rental_prices/rj_rental_prices.png)
-
 5. **Geospatial analysis**: Project coordinates (UTM 23S) for accurate geometry; map rental prices over Rio districts using GeoPandas/Matplotlib.
-
 6. **Modeling**: Encode features with DictVectorizer; train Linear Regression, Random Forest, and XGBoost; evaluate via RMSE on training data.
 
 ## Findings
-- Strongest rent correlates: meterage, bathrooms/suites, and condo_fee; parking contributes with diminishing returns.
-- Geography: coastal/west districts (e.g., Barra da Tijuca) command materially higher rents than inland districts.
-- Amenities: pool/gym/security align with higher prices; boolean expansion reduced noise from semi-structured text.
-- Data quality: regex recovery rescued many missing structural fields, improving coverage and model stability.
+
+- Median rent tops out for penthouses (cobertura), bottoms out for studios (kitnet), and spikes for houses (casa).
+![Rental price distribution by category](/assets/images/projects/rental_prices/box_rental_by_category.png)
+- South district (sul) median rent runs higher, but the peak prices are in the west district (oeste).
+![Rental price distribution by district](/assets/images/projects/rental_prices/box_rental_by_district.png)
+- Not only does the median rent run higher in the south district, but the same pattern is also observable when property types are analyzed individually.
+![Rental price distribution by category and district](/assets/images/projects/rental_prices/box_rental_by_category_and_district.png)
+- South and west districts command materially higher rents than inland districts.
+![Rio de Janeiro rental price geospatial analysis](/assets/images/projects/rental_prices/rj_rental_prices.png)
 
 ## Results
 - Clean, enriched dataset with engineered numeric, categorical, and geospatial features.
