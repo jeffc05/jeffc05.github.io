@@ -41,7 +41,7 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 ## Results
 - Clean, enriched dataset with engineered numeric, categorical, and geospatial features.
 - Models trained; XGBoost achieved the lowest validation RMSE among tested models, outperforming the linear baseline and Random Forest.
-- Delivered visuals: fee/rent histograms, boxplots by district/category, lower-triangle correlation heatmap, geospatial scatter, feature importances, and predicted vs actual scatter.
+- Rio de Janeiro Rent Pricer App deployed using Streamlit
 
 ### Feature Importances (XGBoost)
 
@@ -50,5 +50,3 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 ### Model Performance: Actual vs Predicted Rental Prices
 
 ![Actual vs predicted log rental prices](/assets/images/projects/rental_prices/scatter_actual_vs_pred_log.png)
-
-## Rio de Janeiro Rent Pricer App
