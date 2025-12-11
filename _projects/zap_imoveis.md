@@ -27,19 +27,19 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 
 ### Rental Price Distribution by Category
 
-![Rental price distribution by category](/assets/images/projects/rental_prices/rental_price_by_category.png)
+![Rental price distribution by category](/assets/images/projects/rental_prices/box_rental_by_category.png)
 
 ### Rental Price Distribution by District
 
-![Rental price distribution by district](/assets/images/projects/rental_prices/rental_price_by_district.png)
+![Rental price distribution by district](/assets/images/projects/rental_prices/box_rental_by_district.png)
 
 ### Rental Price Distribution by Category and District
 
-![Rental price distribution by category and district](/assets/images/projects/rental_prices/rental_price_by_category_and_district.png)
+![Rental price distribution by category and district](/assets/images/projects/rental_prices/box_rental_by_category_and_district.png)
 
 ### Geospatial Price Analysis: Rio de Janeiro
 
-![Rio de Janeiro rental price geospatial analysis](/assets/images/projects/rental_prices/rio_de_janeiro.png)
+![Rio de Janeiro rental price geospatial analysis](/assets/images/projects/rental_prices/rj_rental_prices.png)
 
 5. **Geospatial analysis**: Project coordinates (UTM 23S) for accurate geometry; map rental prices over Rio districts using GeoPandas/Matplotlib.
 
@@ -62,7 +62,7 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 
 ### Model Performance: Actual vs Predicted Rental Prices
 
-![Actual vs predicted log rental prices](/assets/images/projects/rental_prices/actual_vs_predicted_log_rent.png)
+![Actual vs predicted log rental prices](/assets/images/projects/rental_prices/scatter_actual_vs_pred_log.png)
 
 ## Next Steps
 
