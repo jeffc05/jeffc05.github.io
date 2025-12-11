@@ -33,15 +33,12 @@ Rio de Janeiro’s rental market is fragmented across districts, property types,
 ![Rental price distribution by category](/assets/images/projects/rental_prices/box_rental_by_category.png)
 - South district (sul) median rent runs higher, but the peak prices are in the west district (oeste).
 ![Rental price distribution by district](/assets/images/projects/rental_prices/box_rental_by_district.png)
-- Not only does the median rent run higher in the south district, but the same pattern is also observable when property types are analyzed individually.
+- Not only does the median rent run higher in the south district (sul), but the same pattern is also observable when property types are analyzed individually.
 ![Rental price distribution by category and district](/assets/images/projects/rental_prices/box_rental_by_category_and_district.png)
-- South and west districts command materially higher rents than inland districts.
+- South (sul) and west (oeste) districts command materially higher rents than inland districts.
 ![Rio de Janeiro rental price geospatial analysis](/assets/images/projects/rental_prices/rj_rental_prices.png)
 
 ## Results
-- Clean, enriched dataset with engineered numeric, categorical, and geospatial features.
-- Models trained; Random Forest achieved the lowest validation RMSE among tested models, outperforming the linear baseline and shallow regularized XGBoost.
-- Delivered visuals: fee/rent histograms, boxplots by district/category, lower-triangle correlation heatmap, geospatial scatter, feature importances, and predicted vs actual scatter.
 
 ### Feature Importances (XGBoost)
 
