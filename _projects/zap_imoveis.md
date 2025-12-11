@@ -9,43 +9,36 @@ teaser: false
 
 ![Zap Imóveis rental price dataset sample](/assets/images/projects/rental_prices/zap-imoveis-image.webp)
 
-## Problem Statement
+# Problem Statement
+Rio de Janeiro’s rental market is fragmented across districts, property types, and amenity mixes, making fair pricing unclear. We need a data-driven model to estimate monthly rent from listing attributes and location signals so owners, renters, and investors can benchmark prices and detect mispricing.
 
-Rio de Janeiro’s rental market varies widely across neighborhoods, property types, and amenities. Renters and investors need a data-driven way to estimate fair rental prices and compare listings. This project builds predictive models to estimate rental prices (`rental_price`) from property characteristics, location, and amenities.
+# Business Value
+- Fair-pricing guidance to reduce lost revenue or vacancy from mispriced listings.
+- Faster screening of large listing inventories for investors/operators.
+- Transparency into top rent drivers to inform renovation and amenity investments.
+- Geospatial insight to prioritize high-yield districts and flag overpriced outliers.
 
-## Business Value
+# Methodology
+1) **Data acquisition**: Scrape portal listings; ingest newline-delimited JSON and wrap into a valid array.
+2) **Cleaning/normalization**: Lowercase/strip text; standardize categories; parse coordinates; extract numerics for rental_price/condo_fee/property_tax.
+3) **Feature engineering**: Expand nested amenities to booleans; regex-recover missing counts (rooms, baths, parking, suites, floor); create density ratios (meterage per room/bath/suite); convert lon/lat to polar (r, theta); targeted fills/sentinels; deduplicate and remove extreme outliers.
+4) **EDA & geospatial**: Plot fee/rent distributions with box marginals; boxplots by district/category; masked correlation heatmap; GeoPandas scatter over district polygons.
+5) **Modeling**: Train/val/test split; DictVectorizer for categorical/boolean features; models: Linear Regression (baseline), Random Forest, XGBoost; metric: RMSE on log_rental_price.
 
-- **Pricing guidance**: Provides an estimated fair rent for new or existing listings, reducing under/over-pricing risk.
-- **Market transparency**: Highlights drivers of rent (size, location, amenities) to inform negotiations and investment decisions.
-- **Operational efficiency**: Automates feature extraction and prediction, enabling faster portfolio screening.
-- **Geospatial insight**: Maps price patterns across districts to target high-demand, high-yield areas.
+# Findings
+- Strongest rent correlates: meterage, bathrooms/suites, and condo_fee; parking contributes with diminishing returns.
+- Geography: coastal/west districts (e.g., Barra da Tijuca) command materially higher rents than inland districts.
+- Amenities: pool/gym/security align with higher prices; boolean expansion reduced noise from semi-structured text.
+- Data quality: regex recovery rescued many missing structural fields, improving coverage and model stability.
 
-## Methodology
+# Results
+- Clean, enriched dataset with engineered numeric, categorical, and geospatial features.
+- Models trained; Random Forest achieved the lowest validation RMSE among tested models, outperforming the linear baseline and shallow regularized XGBoost.
+- Delivered visuals: fee/rent histograms, boxplots by district/category, lower-triangle correlation heatmap, geospatial scatter, feature importances, and predicted vs actual scatter.
 
-1. **Data collection**: Web scraping of a major Brazilian real estate portal; raw JSON stored with listing details.
-2. **Cleaning & normalization**: Handle `N/A`, lowercasing, standardize categories, parse coordinates, and numeric extraction for prices/fees.
-3. **Feature engineering**: Expand nested amenities to booleans; extract counts (rooms, baths, parking, suites); derive ratios (meterage per room/bath/suite); convert coordinates to polar; handle missing values via regex extraction and targeted fills.
-4. **Exploratory analysis**: Distributions, outlier filtering (rental_price < 120k, condo_fee < 10.5k, property_tax < 75k), correlation heatmaps.
-5. **Geospatial analysis**: Project coordinates (UTM 23S) for accurate geometry; map rental prices over Rio districts using GeoPandas/Matplotlib.
-6. **Modeling**: Encode features with DictVectorizer; train Linear Regression, Random Forest, and XGBoost; evaluate via RMSE on training data.
-
-## Findings
-
-- **Price drivers**: Meterage, number of bathrooms/suites, and condo_fee show strong positive correlation with rent; parking spaces add value but with diminishing returns.
-- **Geography matters**: Coastal and west zones (e.g., Barra da Tijuca) show higher rents; inland districts trend lower.
-- **Amenities**: Presence of key amenities (e.g., pool, gym, security) aligns with higher rents; amenity columns converted to boolean indicators reduced noise.
-- **Data quality**: Many listings lacked explicit counts; regex-based extraction from descriptions recovered missing rooms/parking/floor_level values.
-
-## Results
-
-- **Clean dataset**: Deduplicated, standardized, and enriched with engineered features and geospatial transforms.
-- **Models trained**: Linear Regression (baseline), Random Forest, and XGBoost; tree-based models fit training data best (lowest RMSE on train), indicating non-linear relationships.
-- **Visualization outputs**: Histogram/boxplots for fees and rent, correlation heatmaps, and geospatial scatter over district polygons.
-- **Actionable use**: The pipeline can score new listings to suggest fair rent and identify outlier pricing; geospatial views guide area targeting.
-
-## Next Steps
-
-- Add cross-validation and hold-out test metrics for robust generalization estimates.
-- Hyperparameter tune RF/XGBoost; calibrate predictions.
-- Incorporate time-based features (listing date) if available; add neighborhood socioeconomic indicators to improve location signal.
-- Package the pipeline into a reusable script or service for batch scoring of new listings.
+# Next Steps
+- Add cross-validation and hold-out test metrics for robustness.
+- Hyperparameter-tune RF/XGBoost and consider simple ensembling.
+- Incorporate time-based and external socioeconomic/location features.
+- Package the pipeline for batch scoring or an API; persist the best model and vectorizer for reuse.
+- Convert remaining static plots (e.g., geospatial) to interactive variants if deeper exploration is needed.
