@@ -1,7 +1,6 @@
 ---
 layout: home
-title: My Portfolio
-# subtitle: CP4I, APIC, ACE, ES, MQ, Aspera 
+title: Portfolio
 classes: wide
 excerpt: "Data Science, Machine Learning and Artificial Intelligence"
 author_profile: true
